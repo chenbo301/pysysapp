@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3',
     'blog.apps.BlogConfig',
     'polls.apps.PollsConfig',
 ]
@@ -82,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pyweb',
         'USER': 'root',
-        'PASSWORD': 'youdaonanti',
+        'PASSWORD': 'toor',
     }
 }
 
