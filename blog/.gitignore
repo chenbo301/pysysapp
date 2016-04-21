@@ -1,0 +1,22 @@
+# 程序定义
+
+# 项目编译文件 
+*.pyc
+*.swp
+
+# pyenv配置文件
+*.python-version
+
+# PyCharm环境配置文件
+.idea/
+/blog/migrations/
+/blog/__pycache__/
+/polls/__pycache__/
+/pyWeb/__pycache__/
+
+# 普通文件
+*~
+.lock
+.DS_Store
+.swp
+.out
