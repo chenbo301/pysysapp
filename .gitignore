@@ -5,6 +5,7 @@
 
 # PyCharm开发环境配置
 .idea/
+/blog/migrations/
 /blog/__pycache__/
 /polls/__pycache__/
 /pyWeb/__pycache__/
