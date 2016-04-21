@@ -2,7 +2,6 @@
 
 # python编译文件
 *.pyc
-*.swp
 
 # PyCharm开发环境配置
 .idea/
