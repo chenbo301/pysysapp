@@ -5,6 +5,9 @@
 
 # PyCharm开发环境配置
 .idea/
+/blog/__pycache__/
+/polls/__pycache__/
+/pyWeb/__pycache__/
 
 # 普通文件
 *~
