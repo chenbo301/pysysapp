@@ -1,0 +1,14 @@
+# 程序定义 
+
+# python编译文件
+*.pyc
+
+# PyCharm开发环境配置
+.idea/
+
+# 普通文件
+*~
+.lock
+.DS_Store
+.swp
+.out
