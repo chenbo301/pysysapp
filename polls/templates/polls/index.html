@@ -1,42 +1,39 @@
 <!DOCTYPE html>
+{% load bootstrap3 %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>网站首页</title> 
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% bootstrap_messages %}
+    {% block bootstrap3_extra_head %}{% endblock %}
 </head>
+
 <body>
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
 
-{# Load the tag library #}
-{% load bootstrap3 %}
+{% block bootstrap3_content %}
+django-bootstrap3 template content
+<div class="container">
+    <h1>{% block title %}(no title){% endblock %}</h1>
+    <p>
+    <a href="">home</a>
+    <a href="">formset</a>
+    <a href="">form</a>
+    <a href="">form_by_field</a>
+    <a href="">form_horizontal</a>
+    <a href="">form_inline</a>
+    <a href="">form_with_files</a>
+    <a href="">pagination</a>
+    <a href="">miscellaneous</a>
+    </p>
+    {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+    {% block content %}(no content){% endblock %}
+</div>
+{% endblock %}
 
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-{# Display django.contrib.messages as Bootstrap alerts #}
-{% bootstrap_messages %}
-
-{# Display a form #}
-<form action="/url/to/submit/" method="post" class="form">
-  {% csrf_token %}
-  {% bootstrap_form form %}
-  {% buttons %}
-    <button type="submit" class="btn btn-primary">
-      {% bootstrap_icon "star" %} Submit
-    </button>
-  {% endbuttons %}
-</form>
-
-{# Read the documentation for more information #}
-</form>
+{% if not 'javascript_in_head'|bootstrap_setting %}{% bootstrap_javascript jquery=True %}{% endif %}
+{% block bootstrap3_extra_script %}{% endblock %}
 </body>
 </html>

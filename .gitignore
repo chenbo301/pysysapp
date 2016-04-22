@@ -9,10 +9,15 @@
 
 # PyCharm环境配置文件
 .idea/
-/blog/migrations/
+
+# Django编译文件
+/blog/migrations/__pycache__/
 /blog/__pycache__/
 /polls/__pycache__/
 /pyWeb/__pycache__/
+
+# Ctags文件
+/pyWeb/tags
 
 # 普通文件
 *~
